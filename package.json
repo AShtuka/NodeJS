@@ -1,0 +1,26 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "NodeJS. Complete quide",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AShtuka/NodeJS.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "JS"
+  ],
+  "author": "Oleksandr Shtuka <ashtuka@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AShtuka/NodeJS/issues"
+  },
+  "homepage": "https://github.com/AShtuka/NodeJS#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
