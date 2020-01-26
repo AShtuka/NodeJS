@@ -1,13 +1,28 @@
-const http = require('http');
-const server = http.createServer((req, res) => {
-    console.log(req.url)
-    res.write('<h1>Hello from NodeJS</h1>');
-    res.write('<h2>Hello from NodeJS</h2>');
-    res.write('<h3>Hello from NodeJS</h3>');
-    res.end('<div style="background: red; width: 200px; height: 200px"><h1>Test</h1></div>')
+const express = require('express');
+const exphbs = require('express-handlebars');
+
+const app = express();
+const hbs = exphbs.create({defaultLayout: 'main', extname: 'hbs'});
+app.engine('hbs', hbs.engine);
+app.set('view engine', 'hbs');
+app.set('views', 'views');
+
+app.get('/', (req, res, next) => {
+    res.render('index');
 });
 
-server.listen(3000, () => {
-    console.log('Server is running...')
+app.get('/about', (req, res, next) => {
+    res.render('about');
 });
 
+
+
+
+
+
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`)
+});
