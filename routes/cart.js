@@ -18,5 +18,10 @@ router.get('/', async (req, res) => {
         price: cart.price})
 });
 
+router.delete('/remove/:id', async (req, res) => {
+    const cart = await Cart.remove(req.params.id);
+    res.json(cart);
+});
+
 
 module.exports = router;
